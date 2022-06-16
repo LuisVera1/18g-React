@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+.square{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+
+.Off{
+  background-color: blue;
+}
+
+.On{
+  background-color: rgb(245, 245, 99);
+  color: black;
+}
