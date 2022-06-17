@@ -52,3 +52,9 @@
   background-color: rgb(245, 245, 99);
   color: black;
 }
+
+.selected{
+  font-weight: bold;
+  color: black;
+  border-left: 3px solid cyan;
+}
