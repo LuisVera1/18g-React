@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import React from 'react';
 
 function App() {
-	const [state, setCount] = useState(0);
+	const [state, setIsOn] = useState(0);
 	const text = state === 0 ? "Off": "On";
 
 	return (
@@ -16,9 +16,15 @@ function App() {
 				<Title text="Prueba2"></Title>
 				<FullName firstName="Luis" lastName="Vera"></FullName>
 
-				<div className={"square " + text}>{text}</div>
-				<button onClick={ () => { setCount(1) }}> Encender </button>
-				<button onClick={ () => {	setCount(0) }}> Apagar </button>
+				<div onMouseOver={(()=>{
+					setIsOn(1)
+				})} 
+				onMouseLeave={(()=>{
+					setIsOn(0)
+				})}
+				className={"square " + text}>{text}</div>
+				{/* <button onClick={ () => { setCount(1) }}> Encender </button>
+				<button onClick={ () => {	setCount(0) }}> Apagar </button> */}
 
 			</header>
 		</div>
