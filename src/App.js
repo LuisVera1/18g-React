@@ -10,27 +10,55 @@ function App() {
 	const [state, setIsOn] = useState(0);
 	const text = state === 0 ? "Off": "On";
 
+	const koders = [
+    {
+      firstName: "Luis",
+      lastName: "Vera",
+      age: 24,
+      gender: "m",
+      photoURL: "https://www.w3schools.com/howto/img_avatar.png",
+    },
+    {
+      firstName: "Nestor",
+      lastName: "Ramírez",
+      age: 40,
+      gender: "m",
+      photoURL: "https://www.w3schools.com/w3images/avatar2.png",
+    },
+    {
+      firstName: "David",
+      lastName: "Romero",
+      age: 28,
+      gender: "m",
+      photoURL: "https://www.w3schools.com/howto/img_avatar.png",
+    },
+    {
+      firstName: "Yusef",
+      lastName: "Lopéz",
+      age: 40,
+      gender: "m",
+      photoURL: "https://www.w3schools.com/w3images/avatar2.png",
+    },
+  ];
+
+	const kodersUI = koders.map((koder, index) => (
+    <li className='listStyle' key={index}>
+			<div className='flexcontainer'>
+				<div className='img'><img className='imgThumb' src={koder.photoURL} alt=""></img></div>
+				<div className='textContainer'>
+					<p className='textBlack'>{koder.firstName + " " + koder.lastName}</p>
+					<p className='textGray'>{"Edad: " + koder.age + ", Género: " + koder.gender}</p>
+				</div>
+			</div>
+		</li>
+  ));
 
 
 	return (
 		<div className="App">
 			<header className="App-header">
 
-				<div onMouseOver={(()=>{
-					setIsOn(1)
-				})} 
-				onMouseLeave={(()=>{
-					setIsOn(0)
-				})}
-				className={"square " + text}>{text}</div>
-
-				<p className={stateP === 0? "selected": ""} onClick={()=>setItem(0)}>Getting Started</p>
-				<p className={stateP === 1? "selected": ""} onClick={()=>setItem(1)}>Add React to a Website</p>
-				<p className={stateP === 2? "selected": ""} onClick={()=>setItem(2)}>Create a New React App</p>
-				<p className={stateP === 3? "selected": ""} onClick={()=>setItem(3)}>CDN Links</p>
-				<p className={stateP === 4? "selected": ""} onClick={()=>setItem(4)}>Release Channels</p>
-
-
+				<ul className='list'>{kodersUI}</ul>
 
 			</header>
 		</div>

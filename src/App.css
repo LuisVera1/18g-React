@@ -1,3 +1,8 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
 .App {
   text-align: center;
 }
@@ -14,7 +19,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,26 +41,59 @@
     transform: rotate(360deg);
   }
 }
-.square{
+
+.list{
+  list-style: none;
+}
+
+.listStyle{
+  border: 2px solid white;
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.listStyle:hover{
+  border: 2px solid rgb(0,140,255);
+}
+
+.flexcontainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.img{
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
+  margin-top: 10px;
 }
 
-.Off{
-  background-color: blue;
+.imgThumb{
+  height: 50px;
+  width: 50px;
+  background-color: gray;
+  border-radius: 100px;
 }
 
-.On{
-  background-color: rgb(245, 245, 99);
-  color: black;
+.textContainer{
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.selected{
-  font-weight: bold;
-  color: black;
-  border-left: 3px solid cyan;
-padding-left: 7px;
+.textBlack{
+  color: black !important;
+  font-size: 12px;
+  font-weight: bold !important;
+  
+}
+
+.textGray{
+  color: rgb(71, 71, 71);
+  font-size: 12px;
 }
